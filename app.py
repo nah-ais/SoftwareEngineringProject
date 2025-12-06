@@ -4,7 +4,7 @@ import pandas as pd
 st.set_page_config(page_title="Calorie Prototype", page_icon="🔥")
 
 # Load simple dataset
-df = pd.read_csv("foods.csv")
+df = pd.read_csv("food.csv")
 
 st.title("🔥 Daily Calorie Intake Prototype")
 st.write("Prototype sederhana untuk menghitung kebutuhan kalori dan rekomendasi makanan.")
@@ -55,3 +55,4 @@ if st.button("Calculate My Calories"):
     st.dataframe(recommended)
 
     st.write("Note: ini rekomendasi sederhana. Nanti kita ganti dengan model ML.")
+
