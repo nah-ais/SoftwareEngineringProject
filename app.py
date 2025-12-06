@@ -8,7 +8,7 @@ st.set_page_config(page_title="Nutrition Planner", page_icon="🔥", layout="wid
 # 1. LOAD DATASET (ROBUST + FALLBACK)
 # =====================================
 BASE_DIR = Path(__file__).resolve().parent
-local_csv = BASE_DIR / "foods.csv"
+local_csv = BASE_DIR / "nutrition.csv"
 
 def load_foods():
     if local_csv.exists():
@@ -235,3 +235,4 @@ meal_plan = generate_meal_plan(df, remaining_calories)
 for meal, rec in meal_plan.items():
     st.markdown(f"### 🍴 {meal}")
     st.table(rec)
+
